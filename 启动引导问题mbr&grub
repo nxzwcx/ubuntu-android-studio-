@@ -1,0 +1,11 @@
+＃先安装win10,后用启动盘安装ubuntu，引导变更为grub2,进入win10后用easybcd修改还是无法改回mbr
+解决：
+（１）制作win启动盘，用bootice等引导修复工具，启动方式变更为mbr。问题是ubuntu无法启动了
+easybcd建立ubuntu，引导盘选/boot盘，　如/dev/sda8, 大小２００M左右。
+
+（２）ubuntu启动进入initramfs等
+解决：ubuntu启动盘进入try模式后，sudo　boot repari会报错。
+[终极办法]下载boot-repair-disk.iso 64bit，系统位数必须一致，否则无效（已测验）
+使用启动盘制作工具rufus制作启动盘，镜像用boot-repair-disk64bit.iso
+启动后使用英文模式，推荐模式修复。
+问题：ubuntu可以正常启动了，但是硬盘引导又变为grub2，不知道怎么变为mbr
