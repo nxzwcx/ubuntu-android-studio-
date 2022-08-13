@@ -1,0 +1,7 @@
+＃查看分区情况
+sudo fdisk -l 
+
+＃挂载点/boot  200M 启动盘，引导mbr/grub2选择引导此盘　　／dev/sda6
+#挂载点/  　　　30G  存储系统，相当于C盘   /dev/sda8
+#挂载点/home   130G 存储用户数据，越大越好。　　/dev/sda7
+#swap 　　　　　８G  作为内存扩展　　　/dev/sda5
