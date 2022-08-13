@@ -1,0 +1,4 @@
+sudo apt-get ntfs-3g
+#依次修复不能访问的磁盘
+sudo ntfsfix /dev/sda1
+sudo ntfsfix /dev/sda2
